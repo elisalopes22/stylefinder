@@ -1,4 +1,5 @@
 # StyleFinder
+#Elisa Lopes
 
 A two-layer fashion Information Retrieval system that combines expert styling advice with product catalog search.
 
@@ -39,7 +40,7 @@ By combining professional styling knowledge (Layer 1) with a real product catalo
 
 ## Datasets
 
-Both datasets are loaded directly from HuggingFace (no manual download or web crawling required).
+Both datasets are loaded directly from HuggingFace.
 
 ### Layer 1: Fashion Style Instruct
 
@@ -98,7 +99,7 @@ An optional **hybrid search** mode combines SQLite metadata filtering with FAISS
 
 ## Indexing Decisions
 
-Based on our [Task 1 exploration](notebooks/Task1_Exploration.ipynb), we evaluated three retrieval methods (Boolean, BM25, Semantic) and chose **FAISS + SQLite** for persistent indexing. Below we document each decision and its rationale.
+Based on the [Task 1 exploration](notebooks/Task1_Exploration.ipynb), I evaluated three retrieval methods (Boolean, BM25, Semantic) and chose **FAISS + SQLite** for persistent indexing. Below I document each decision and its rationale.
 
 ### Why FAISS + SQLite (and not Boolean/BM25)?
 
@@ -208,7 +209,7 @@ stylefinder/
 
 ### Evaluation Set
 
-We created 15 evaluation queries with **manually curated** ground truth. For each query, we ran FAISS semantic search, inspected the top-5 results, and recorded which document IDs are genuinely relevant — not just whatever the system returned. This avoids circular evaluation.
+15 evaluation queries with ground truth. For each query, I ran FAISS semantic search, inspected the top-5 results, and recorded which document IDs are genuinely relevant, not just whatever the system returned. This avoids circular evaluation.
 
 The evaluation set is stored in [`evaluation_set.json`](evaluation_set.json) with the following structure:
 
