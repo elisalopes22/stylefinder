@@ -1,0 +1,107 @@
+[
+  {
+    "query_id": "Q01",
+    "query": "flattering wedding guest dress that cinches at the waist",
+    "layer": "style",
+    "expected_doc_ids": ["207", "237", "379", "234", "2365"],
+    "notes": "All results describe women with defined waists seeking dresses for events. Doc 207 and 379 specifically mention narrow waist + wider hips. Doc 237 is a plus-size hourglass seeking wrap dresses."
+  },
+  {
+    "query_id": "Q02",
+    "query": "plus-size woman looking for a professional interview outfit",
+    "layer": "style",
+    "expected_doc_ids": ["1219", "1140"],
+    "notes": "Only docs 1219 (plus-size, Old Hollywood, job interview) and 1140 (plus-size pear shape, job interview) are truly relevant. Other results matched 'professional' but not 'plus-size'."
+  },
+  {
+    "query_id": "Q03",
+    "query": "tall athletic man going to a casual date night",
+    "layer": "style",
+    "expected_doc_ids": ["833", "2349", "2925"],
+    "notes": "Doc 833 is a tall man 6'0 with a rectangular shape. Docs 2349 and 2925 are a tall slender man at 190cm. Other results were short or plus-size men, not matching the query."
+  },
+  {
+    "query_id": "Q04",
+    "query": "non-binary person minimalist outfit for a gallery opening",
+    "layer": "style",
+    "expected_doc_ids": ["1593", "1337", "2623"],
+    "notes": "Doc 1593 is a minimalist man going to a gala/exhibition. Doc 1337 is an androgynous person with gender-neutral minimalist style. Doc 2623 is a cis woman preferring gender-neutral styles. Other results were minimalist but not gender-neutral."
+  },
+  {
+    "query_id": "Q05",
+    "query": "pear-shaped woman looking for a brunch outfit",
+    "layer": "style",
+    "expected_doc_ids": ["1073", "2735", "3132", "247", "1629"],
+    "notes": "All results describe pear-shaped women. Strong matches across the board."
+  },
+  {
+    "query_id": "Q06",
+    "query": "comfortable hiking outfit for cool autumn weather",
+    "layer": "style",
+    "expected_doc_ids": ["2266", "2244", "2259", "2271", "2220"],
+    "notes": "All results are camping/hiking occasion entries. All relevant regardless of body type, since the query focuses on activity and weather."
+  },
+  {
+    "query_id": "Q07",
+    "query": "hourglass figure looking for an elegant evening gown",
+    "layer": "style",
+    "expected_doc_ids": ["1852", "836", "2412"],
+    "notes": "Doc 1852 seeks an hourglass silhouette. Doc 836 is a curvy woman with hourglass shape. Doc 2412 is a curvy woman with defined waist. Docs 584 and 1572 describe ruler-straight figures wanting to create curves, which is the opposite of the query."
+  },
+  {
+    "query_id": "Q08",
+    "query": "petite woman going to a music festival",
+    "layer": "style",
+    "expected_doc_ids": ["732"],
+    "notes": "Only doc 732 (petite slender frame) is genuinely relevant. Doc 1109 describes a 5'11 woman (not petite). Other results are not petite or not festival-related. Weak coverage for this query."
+  },
+  {
+    "query_id": "Q09",
+    "query": "elegant black evening dress for women",
+    "layer": "product",
+    "expected_doc_ids": ["766", "3115", "2857", "33177", "12423"],
+    "notes": "All results are women's black dresses. Doc 12423 is specifically labeled as formal. High-quality matches."
+  },
+  {
+    "query_id": "Q10",
+    "query": "men casual blue shirt for summer",
+    "layer": "product",
+    "expected_doc_ids": ["34926", "23478", "10190", "7844", "35597"],
+    "notes": "All results are men's blue shirts for summer casual use. Score 0.89 indicates near-perfect match."
+  },
+  {
+    "query_id": "Q11",
+    "query": "women white sneakers casual",
+    "layer": "product",
+    "expected_doc_ids": ["7839", "28526", "10105", "22310", "7172"],
+    "notes": "All results are women's white casual shoes/sneakers. Exact matches."
+  },
+  {
+    "query_id": "Q12",
+    "query": "formal black shoes for men",
+    "layer": "product",
+    "expected_doc_ids": ["28927", "13716", "13276", "12447", "5504"],
+    "notes": "All results are men's formal black shoes. Score 0.91 is the highest across all queries."
+  },
+  {
+    "query_id": "Q13",
+    "query": "outfit for wheelchair user at a formal event",
+    "layer": "style",
+    "expected_doc_ids": [],
+    "notes": "ADVERSARIAL: No documents in the corpus address wheelchair accessibility. All returned results are irrelevant despite scores around 0.44. This demonstrates the system's inability to indicate when it lacks relevant data."
+  },
+  {
+    "query_id": "Q14",
+    "query": "budget friendly outfit under 50 dollars",
+    "layer": "style",
+    "expected_doc_ids": [],
+    "notes": "ADVERSARIAL: Neither dataset contains price information. The misleadingly high score (0.61) is a false positive. The system matched general outfit recommendations while ignoring the budget constraint entirely."
+  },
+  {
+    "query_id": "Q15",
+    "query": "sustainable eco-friendly clothing for a date night",
+    "layer": "style",
+    "expected_doc_ids": [],
+    "notes": "ADVERSARIAL: No documents discuss sustainability or eco-friendly materials. The system matched 'date night' and ignored 'sustainable eco-friendly', producing another false positive."
+  }
+]

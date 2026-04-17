@@ -1,0 +1,18 @@
+[project]
+name = "stylefinder"
+version = "0.1.0"
+description = "A two-layer fashion Information Retrieval system"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rank-bm25",
+    "sentence-transformers",
+    "datasets",
+    "faiss-cpu",
+    "pandas",
+    "numpy",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
