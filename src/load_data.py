@@ -29,6 +29,7 @@ def load_product_data():
     dataset = load_dataset(PRODUCT_DATASET, split="train")
     df = dataset.to_pandas()
     df = df.dropna(subset=["productDisplayName", "articleType"]).reset_index(drop=True)
+    df = df[df['gender'].isin(['Men', 'Women', 'Unisex'])].reset_index(drop=True)  # <-- ADD THIS LINE
     print(f"  Loaded: {df.shape}")
     return df
 
